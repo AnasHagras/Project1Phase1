@@ -1,435 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-rwar
 
-<head class="s">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/03b37b666b.js" crossorigin="anonymous"></script>
-    <title>Project1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+    <title>Mine</title>
     <style>
         * {
+            padding: 0px;
+            margin: 0px;
             box-sizing: border-box;
         }
         
-        nav {
+        .nav-container {
+            height: 4em;
             display: flex;
             align-items: center;
-        }
-        
-        nav>div {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        
-        div.search {
-            fill:10;
-            border: 1px solid black;
-            border-radius: 50px;
-            padding: 15px;
-        }
-        
-        input {
-            border: none;
-        }
-        
-        input:focus-visible {
-            border: none;
-            outline: none;
-        }
-        
-        .login {
             padding: 10px;
-            color: black;
-            background-color: white;
-            border: 1px solid black;
+            /* border: 1px solid green; */
+            box-shadow: 2px 1px 6px grey;
         }
         
-        .signUp {
-            padding: 11px;
-            background-color: black;
-            color: white;
+        .nav-list {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            /* border: 1px solid salmon; */
+            width: 100%;
         }
         
-        .search {
+        .nav-item-3 {
             flex: 1;
         }
         
-        .small {
-            display: none;
-        }
-        
-        .icons {
-            display: none;
-        }
-        
-        .small {
-            display: none;
-        }
-        
-        nav {
-            align-items: center;
+        form {
+            width: 100%;
             display: flex;
-            box-shadow: 10px 10px 10px 0 #ddd;
-            height: 80px;
         }
         
-        nav div {
-            margin-left: 10px;
+        .search-input {
+            /* border: 1px solid fuchsia; */
+            flex: 1;
+        }
+        
+        .search-btn {
+            /* border: 1px solid sienna; */
+            width: 10%;
+        }
+        
+        .nav-menu {
+            display: none;
+        }
+        
+        .nav-item {
+            line-height: 1.2;
+            margin-right: 20px;
+            display: inline-block;
+            min-width: fit-content;
+            /* display: flex; */
+            /* height: 50px; */
+        }
+        
+        .nav-item-2 a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .btn-outline {
+            font-size: 0.85em;
+            font-weight: bold;
+            border: 1px solid black;
+            color: black !important;
+            padding: 0.7em 0.85em;
+        }
+        
+        .btn-outline:hover {
+            cursor: pointer;
+        }
+        
+        form {
+            display: felx;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .search-input {
+            border: none;
+            outline: none;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 80px;
             margin-right: 10px;
         }
         
-        nav .search-box {
-            display: flex;
+        .search-btn {
+            padding: 10px;
+            width: 100px;
+            /* height: fit-content; */
+        }
+        
+        .btn {
+            font-size: 0.85em;
+            font-weight: bold;
             border: 1px solid black;
-            border-radius: 50px;
-            padding: 15px;
-            flex: 1;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            background-color: black;
+            color: white !important;
+            padding: 0.7em 0.85em;
         }
         
-        nav input {
-            border: none;
-            margin-left: 25px;
-            flex: 1;
-            outline: none;
-            font-size: 20px;
-        }
-        
-        input:focus-visible {
-            border: none;
-        }
-        
-        nav a {
+        .nav-item-2 a:visited {
             text-decoration: none;
-            font-size: 15px;
-            font-family: "Poppiens", sans-serif;
             color: black;
         }
         
-        nav a:hover {
+        .nav-item-2 a:hover {
             color: purple;
         }
         
-        nav .blo {
-            padding: 10px;
-            color: black;
-            background-color: white;
+        li img {
+            display: block;
+        }
+        
+        .lang {
             border: 1px solid black;
+            padding: 7.5px;
         }
         
-        nav .bloc {
-            padding: 10px;
-            color: white;
-            background-color: black;
-        }
-        
-        nav .bloc a {
-            color: white;
-        }
-        
-        @media screen and (max-width:915px) {
-            .small {
-                display: block;
-            }
-            .big {
-                display: none;
-            }
-            .icons {
-                display: flex;
-            }
-            nav {
-                align-items: center;
-                justify-content: space-between;
-            }
-            nav .search-box {
-                display: none;
-            }
-            .small {
-                display: block;
-            }
-            .small.loke {
-                display: inline;
-            }
-            .big {
-                display: none;
-            }
-            nav {
-                align-items: center;
-                justify-content: space-between;
-            }
-        }
-        
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 0;
-            margin-top: 3%;
-            margin-bottom: 3%;
-            box-sizing: border-box;
-            background-color: #ddd;
-            box-shadow: 10px 10px 10px 0 #ddd;
-        }
-        
-        .container div {
-            width: 100%;
-            height: 450px;
-        }
-        
-        .container .bck {
-            background-image: url("https://img-c.udemycdn.com/notices/web_banner/slide_1_image_udlite/b8f46419-eca3-44c1-8ba0-ed2ca89f8884.jpg");
-            background-size: cover;
-        }
-        
-        .imag {
+        .nav-menu {
             display: none;
         }
         
-        .container .txt {
-            display: flex;
-            padding: 10px;
-            margin-top: 5%;
-            margin-left: 10%;
-            width: 27%;
-            height: 50%;
-            box-shadow: 10px 10px 10px 0 gray;
-            flex-direction: column;
-            line-height: 1.8;
+        .header-container {
+            margin: 10px auto;
+            width: fit-content;
+            position: relative;
+        }
+        
+        .header-container img {
+            width: 100%;
+        }
+        
+        .header-container .card {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            padding: 20px;
+            box-shadow: 3px 6px 14px grey;
             background-color: white;
         }
         
-        .container.hd {
-            font-family: SuisseWorks, Georgia, Times, times new roman, serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+        main section {
+            width: fit-content;
+            margin: auto;
+            padding: 15px;
         }
         
-        .container.scrip {
-            font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
-            font-size: 20px;
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
         }
         
-        .text {
-            display: none;
+        section h2 {
+            margin-bottom: 10px;
         }
         
-        @media screen and (max-width: 1105px) {
-            .container {
-                display: none;
-            }
-            .clas {
-                width: 100%;
-                height: 350px;
-            }
-            .txt {
-                display: none;
-            }
-            .imag {
-                display: inline-block;
-                width: 100%;
-                max-height: 100%;
-            }
-            .text {
+        .course-bar {
+            margin-top: 15px;
+        }
+        
+        .course-bar-item {
+            margin-right: 15px;
+            color: #6a6f73;
+            min-width: fit-content;
+        }
+        
+        .course-bar-item-active {
+            color: black;
+        }
+        
+        .course-container {
+            border: 1px solid grey;
+            margin-top: 10px;
+            padding: 10px;
+            max-width: 1300px;
+        }
+        
+        @media only screen and (max-width: 1055px) {
+            .nav-menu {
                 display: block;
-                padding: 10px;
-                width: 100%;
-                height: 40%;
-                box-shadow: 10px 10px 10px 0 gray;
-                flex-direction: column;
-                line-height: 1.8;
+                order: 1;
+            }
+            .nav-logo {
+                order: 2;
+            }
+            .nav-list {
+                display: none;
+            }
+            .nav-container {
+                justify-content: space-between;
+            }
+        }
+        
+        .paragraph {
+            max-width: 60%;
+        }
+        
+        .course-item {
+            margin-bottom: 10px;
+        }
+        
+        .course-title {
+            max-width: 240px;
+        }
+        
+        .course-author {
+            max-width: 240px;
+            color: grey;
+        }
+        
+        .course-detail {
+            margin-bottom: 7px;
+        }
+        
+        .course {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .courses-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .rating {
+            color: #b4690e;
+        }
+        
+        @media only screen and (max-width: 680px) {
+            .header-container .card {
+                box-shadow: none;
                 background-color: white;
+                position: initial;
+            }
+            section {
+                padding: 0px;
+                width: fit-content !important;
+                margin: 0px 0px;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <div class="small">
-            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-        </div>
-        <div class="logo big">
-            <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" width="91" height="34">
-        </div>
-        <div class="logo small">
-            <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" width="91" height="34">
-        </div>
-        <div class="icons small">
-            <div class="small loke">
-                <a href="#"><i class="fa-solid fa-magnifying-glass fa-1x"></i></a>
-            </div>
-            <a href="#"><i class="fa-solid fa-cart-shopping fa-1x"></i></a>
-        </div>
-        <div class="categories big">
-            Catagories
-        </div>
-        <div class="search big">
-            <form action="" style="display: flex;">
-                <a href="#" style="margin-right: 10px;"><i class="fa-solid fa-magnifying-glass fa-1x"></i></a>
-                <input type="text" placeholder="Search for anything" style="width: 100%; display: inline;">
-            </form>
-        </div>
-        <div class="bus big">
-            Udemy Business
-        </div>
-        <div class="tech big">
-            Teach on Udemy
-        </div>
-        <div class="chart big">
-            <a href="#"><i class="fa-solid fa-cart-shopping fa-1x"></i></a>
-        </div>
-        <div class="login big">
-            Log in
-        </div>
-        <div class="signUp big">
-            Sign up
-        </div>
-        <div class="language big">
-            <a href="#"><i class="fa-solid fa-earth-africa"></i></a>
-        </div>
-    </nav>
     <header>
-        <div class="container">
-            <div class="big bck">
-                <div class="txt">
-                    <p class="scrip">
-                        <h1 class="hd">New to Udemy? Lucky you.</h1>
-                        Udemy Business is trusted by 10.5K+ companies around the world. Find out what we can do for yours.
-                    </p>
+        <nav>
+            <div class="nav-container">
+                <div class="nav-item nav-logo">
+                    <a href="#">
+                        <img src="images/Udemy_logo.svg" alt="Logo" id="Logo" style="width:91px;" />
+                    </a>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item nav-item-2">
+                        <a href="#">Categories</a>
+                    </li>
+                    <li class="nav-item nav-item-3">
+                        <form action="">
+                            <i></i>
+                            <input type="text" placeholder="Search for anything" class="search-input">
+                            <button type="submit" class="search-btn">Search</button>
+                        </form>
+                    </li>
+                    <li class="nav-item nav-item-2">
+                        <a href="">Udemy Business</a>
+                    </li>
+                    <li class="nav-item nav-item-2">
+                        <a href="">Teach on Udemy</a>
+                    </li>
+                    <li class="nav-item nav-item-1">
+                        <a href="#"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" width="30" /></a>
+                    </li>
+                    <li class="nav-item nav-item-2">
+                        <a href="" class="btn-outline">Log in</a>
+                    </li>
+                    <li class="nav-item nav-item-2">
+                        <a href="" class="btn">Sign up</a>
+                    </li>
+                    <li class="lang">
+                        <a href=""><img src="images/earth-grid-svgrepo-com.svg" alt="Language" width="18" /></a>
+                    </li>
+                </ul>
+                <div class="nav-item nav-menu">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
-        </div>
-        <div class="small clas">
-            <img class="imag" src="alarm.jpg" alt="alarm-photo">
-        </div>
-        <div class="small text">
-            <p class="small scrip">
-                <h1 class="hd">New to Udemy? Lucky you.</h1>
-                Udemy Business is trusted by 10.5K+ companies around the world. Find out what we can do for yours.
-            </p>
+        </nav>
+        <div class="header-container">
+            <img src="images/header.jpg" alt="header banner photo" />
+            <div class="card">
+                <h1>Learning that gets you</h1>
+                <p>Skills for your present (and your future). Get started with us.</p>
+            </div>
         </div>
     </header>
-    <section>
-        <h3>A Broad selection of courses</h3>
-        <p>Choose from 185,000 online video cources with new additions published every month</p>
-        <ul>
-            <li>Python</li>
-            <li>Excel</li>
-            <li>Web Development</li>
-            <li>JavaScript</li>
-            <li>Data Science</li>
-            <li>AWS Certification</li>
-            <li>Drawing</li>
-        </ul>
-        <div class="card">
-            <h2 style="margin: 0px;">Expand your career opportunities with Python</h2>
-            <p>Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to build
-                everything from games to sites to apps. Choose from a range of courses that will appeal to</p>
-            <button class="explore">Explore Python</button>
-            <div class="cources">
-                <div class="course">
-                    <img src="" alt="" width="240" height="135">
-                    <h4 class="courseDesc">Learn Python: The Complete Python Programming Course</h4>
-                    <p>Avinash Jain,The Codex</p>
-                    <img src="" alt="">
-                    <h4 class="price">E£679.99</h4>
-                </div>
-                <div class="course">
-                    <img src="" alt="" width="240" height="135">
-                    <h4 class="courseDesc">Learn Python: The Complete Python Programming Course</h4>
-                    <p>Avinash Jain,The Codex</p>
-                    <img src="" alt="">
-                    <h4 class="price">E£679.99</h4>
-                </div>
-                <div class="course">
-                    <img src="" alt="" width="240" height="135">
-                    <h4 class="courseDesc">Learn Python: The Complete Python Programming Course</h4>
-                    <p>Avinash Jain,The Codex</p>
-                    <img src="" alt="">
-                    <h4 class="price">E£679.99</h4>
-                </div>
-                <div class="course">
-                    <img src="" alt="" width="240" height="135">
-                    <h4 class="courseDesc">Learn Python: The Complete Python Programming Course</h4>
-                    <p>Avinash Jain,The Codex</p>
-                    <img src="" alt="">
-                    <h4 class="price">E£679.99</h4>
-                </div>
-                <div class="course">
-                    <img src="" alt="" width="240" height="135">
-                    <h4 class="courseDesc">Learn Python: The Complete Python Programming Course</h4>
-                    <p>Avinash Jain,The Codex</p>
-                    <img src="" alt="">
-                    <h4 class="price">E£679.99</h4>
+    <main>
+        <section>
+            <h2>A broad selection of courses</h2>
+            <p>
+                Choose from 185,000 online video courses with new additions published every month
+            </p>
+            <ul class="course-bar">
+                <li class="course-bar-item course-bar-item-active">Python</li>
+                <li class="course-bar-item">Excel</li>
+                <li class="course-bar-item">Web Development</li>
+                <li class="course-bar-item">JavaScript</li>
+                <li class="course-bar-item">Data Science</li>
+                <li class="course-bar-item">AWS Certification</li>
+                <li class="course-bar-item">Drawing</li>
+            </ul>
+            <div class="course-container">
+                <h3 class="course-item">Expand your career opportunities with Python</h3>
+                <p class="course-item paragraph">
+                    Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything
+                    from games to sites to apps. Choose from a range of courses that will appeal to ...
+                </p>
+                <button class="course-item btn-outline">Explore Python</button>
+                <div class="courses-container">
+                    <div class="course">
+                        <img src="images/python1.jpg" alt="python course photo" class="course-detail">
+                        <h3 class="course-title course-detail">Learn Python: The Complete Python Programming Course</h3>
+                        <p class="course-author course-detail">Avinash Jain, The Codex</p>
+                        <div class="course-detail">
+                            <span class="rating ">4.4</span>
+                            <span class="rating ">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            </span>
+                            <span class="rating-numbers course-author">(2,906)</span>
+                        </div>
+                        <div class="course-price course-detail">$94.99</div>
+                    </div>
+                    <div class="course">
+                        <img src="images/python2.jpg" alt="python course photo" class="course-detail">
+                        <h3 class="course-title course-detail">Learn Python: The Complete Python Programming Course</h3>
+                        <p class="course-author course-detail">Avinash Jain, The Codex</p>
+                        <div class="course-detail">
+                            <span class="rating ">4.4</span>
+                            <span class="rating ">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            </span>
+                            <span class="rating-numbers course-author">(2,906)</span>
+                        </div>
+                        <div class="course-price course-detail ">$94.99</div>
+                    </div>
+                    <div class="course">
+                        <img src="images/python3.jpg" alt="python course photo" class="course-detail">
+                        <h3 class="course-title course-detail">Learning Python for Data Analysis and Visualization</h3>
+                        <p class="course-author course-detail">Jose Portilla</p>
+                        <div class="course-detail">
+                            <span class="rating ">4.4</span>
+                            <span class="rating ">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            </span>
+                            <span class="rating-numbers course-author">(17,981)</span>
+                        </div>
+                        <div class="course-price course-detail">$119.99</div>
+                    </div>
+                    <div class="course">
+                        <img src="images/python4.jpg" alt="python course photo" class="course-detail">
+                        <h3 class="course-title course-detail">Python for Beginners - Learn Programming From Scratch</h3>
+                        <p class="course-author course-detail">Edwin Diaz, Coding Faculty Solutions</p>
+                        <div class="course-detail">
+                            <span class="rating ">4.4</span>
+                            <span class="rating ">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            </span>
+                            <span class="rating-numbers course-author">(1,762)</span>
+                        </div>
+                        <div class="course-price course-detail">$84.99</div>
+                    </div>
+                    <div class="course">
+                        <img src="images/python5.jpg" alt="python course photo" class="course-detail">
+                        <h3 class="course-title course-detail">Learn Python: Python for Beginners</h3>
+                        <p class="course-author course-detail">Abrar Hussain</p>
+                        <div class="course-detail">
+                            <span class="rating ">4.2</span>
+                            <span class="rating ">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            </span>
+                            <span class="rating-numbers course-author">(2,766)</span>
+                        </div>
+                        <div class="course-price course-detail">$29.99</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <style>
-        /* * {
-            padding: 0px;
-            margin: 0px;
-        } */
-        
-        section {
-            width: 80%;
-            margin: auto;
-        }
-        
-        ul {
-            list-style: none;
-            display: flex;
-            margin: 0px;
-            padding: 0px;
-        }
-        
-        li {
-            font-weight: bold;
-            margin-right: 12px;
-            color: #6a6f73;
-        }
-        
-        li:hover {
-            color: black;
-            cursor: pointer;
-        }
-        
-        .card {
-            border: 1px solid #6a6f73;
-            margin-top: 15px;
-            padding: 20px;
-        }
-        
-        .explore {
-            padding: 10px;
-            color: black;
-            background-color: white;
-            border: 1px solid black;
-            font-weight: bold;
-        }
-        
-        .explore:hover {
-            cursor: pointer;
-            background-color: aliceblue;
-        }
-        
-        .cources {
-            width: fit-content;
-            border: 1px solid salmon;
-            margin-top: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .course {
-            border: 2px solid seagreen;
-            width: 240px;
-            margin-bottom: 15px;
-            margin-right: 15px;
-        }
-    </style>
-    <script src="script.js"></script>
+        </section>
+    </main>
 </body>
 
 </html>
