@@ -1,10 +1,6 @@
-* {
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-}
 
-* {
+
+	* {
             padding: 0px;
             margin: 0px;
             box-sizing: border-box;
@@ -15,7 +11,6 @@
             display: flex;
             align-items: center;
             padding: 10px;
-            /* border: 1px solid green; */
             box-shadow: 2px 1px 6px grey;
         }
         
@@ -23,7 +18,6 @@
             display: flex;
             list-style: none;
             align-items: center;
-            /* border: 1px solid salmon; */
             width: 100%;
         }
         
@@ -37,12 +31,10 @@
         }
         
         .search-input {
-            /* border: 1px solid fuchsia; */
             flex: 1;
         }
         
         .search-btn {
-            /* border: 1px solid sienna; */
             width: 10%;
         }
         
@@ -55,8 +47,6 @@
             margin-right: 20px;
             display: inline-block;
             min-width: fit-content;
-            /* display: flex; */
-            /* height: 50px; */
         }
         
         .nav-item-2 a {
