@@ -25,14 +25,14 @@ function filter(searchText) {
         return courses;
     }
     for (let i = 0; i < courses.length; i++) {
-        if (courses[i]['title'][0] == searchText[0]) {
+        if (courses[i]['title'].toLowerCase().indexOf(searchText.toLowerCase()) !== -1) {
             filtered.push(courses[i]);
         }
     }
     return filtered;
 }
 
-fetch('courses.json')
+fetch('https://api.npoint.io/74d742bda6f905ced3c7')
     .then((response) => {
         return response.json();
     }).then((arr) => {
